@@ -1,0 +1,33 @@
+{
+  "name": "ticketing-system",
+  "version": "1.0.0",
+  "description": "This ticket support application.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run start\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm run build "
+  },
+  "keywords": [],
+  "author": "Ebuka Nwabueze",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "concurrently": "^7.0.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "type": "module",
+  "engines": {
+    "node": "16.13.1"
+  }
+}
